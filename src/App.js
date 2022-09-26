@@ -3,6 +3,7 @@ import Home from "./Pages/Home/Home";
 import NotFound from "./Pages/NotFound/NotFound";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
+import Register from "./Pages/Register/Register";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div className="body">
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/signup" element={<Register />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
