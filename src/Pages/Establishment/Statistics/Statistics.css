@@ -1,0 +1,7 @@
+.statistics {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
