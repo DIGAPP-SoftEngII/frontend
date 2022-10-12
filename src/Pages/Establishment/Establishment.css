@@ -1,0 +1,143 @@
+.establishment {
+  position: relative;
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: rgb(5, 127, 141);
+  background: linear-gradient(
+    336deg,
+    rgba(5, 127, 141, 1) 18%,
+    rgba(183, 200, 203, 1) 49%,
+    rgba(255, 114, 97, 1) 100%
+  );
+  text-align: center;
+}
+
+.est__container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border: solid black;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.est__tittle {
+  border: solid black;
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
+  margin-top: 40px;
+  font-family: "Montez", cursive;
+  font-size: 3.5rem;
+}
+
+.est__subtittle {
+  text-align: left;
+}
+
+.est__desc {
+  width: 70%;
+  text-align: left;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.est__information {
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+.est__text__negrita {
+  font-weight: bold;
+}
+
+.est__est {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 30px;
+  border: solid black;
+  border-radius: 5px;
+}
+
+.est__rep {
+  padding-bottom: 30px;
+  width: 70%;
+  margin: auto;
+  border: solid black;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.cursive {
+  font-family: "Montez", cursive;
+  font-size: 2rem;
+}
+
+.rep__button {
+  font-size: 1.3rem;
+  text-decoration: none;
+  background: none;
+  border: solid black;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-style: solid;
+  transition: 250ms;
+  margin-top: 20px;
+}
+
+.est__link {
+  text-decoration: none;
+  color: black;
+}
+
+.est__ses:hover {
+  color: #ff7261;
+  transition: 250ms;
+  cursor: pointer;
+}
+.est__img {
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 992px) {
+  .establishment {
+    padding-top: 80px;
+  }
+
+  .est__tittle {
+    width: 100%;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .est__tittle {
+    font-size: 2rem;
+  }
+  .est__desc {
+    width: 95%;
+    padding: 5px;
+  }
+
+  .est__information {
+    width: 100%;
+  }
+
+  .est__est {
+    width: 100%;
+  }
+
+  .est__rep {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+}

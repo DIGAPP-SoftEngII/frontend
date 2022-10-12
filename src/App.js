@@ -6,6 +6,7 @@ import Login from "./Pages/Login/Login";
 import "./App.css";
 import Register from "./Pages/Register/Register";
 import Establishments from "./Pages/Establishments/Establishments";
+import Establishment from "./Pages/Establishment/Establishment";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/signup" element={<Register />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/establishments" element={<Establishments />} />
+          <Route exact path="/establishment/:id" element={<Establishment />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
