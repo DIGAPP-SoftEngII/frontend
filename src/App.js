@@ -7,6 +7,8 @@ import "./App.css";
 import Register from "./Pages/Register/Register";
 import Establishments from "./Pages/Establishments/Establishments";
 import Establishment from "./Pages/Establishment/Establishment";
+import RegisterEst from "./Pages/RegisterEst/RegisterEst";
+import UserAdmin from "./Pages/UserAdmin/UserAdmin";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/establishments" element={<Establishments />} />
           <Route exact path="/establishment/:id" element={<Establishment />} />
+          <Route exact path="/user/:id" element={<UserAdmin />} />
+          <Route exact path="/user/:id/registerEst" element={<RegisterEst />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

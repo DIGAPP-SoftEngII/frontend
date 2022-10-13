@@ -98,7 +98,7 @@ function Navbar() {
               <li className="navbar__item">
                 <Link
                   className="navbar__link"
-                  to="/establishments"
+                  to={`/user/${cookies.get("id")}`}
                   onClick={() => {
                     setMenuactive(false);
                   }}
