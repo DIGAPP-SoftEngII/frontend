@@ -1,42 +1,33 @@
 import React from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import { setReport } from "../../../Services/Api";
 import Cookies from "universal-cookie";
 import "./MakeReport.css";
 
 const cookies = new Cookies();
-const baseURL = "https://backenddig.herokuapp.com/api/reports/";
 
 function MakeReport() {
   const { id } = useParams();
-
-  const postReport = async () => {
-    axios({
-      method: "post",
-      url: baseURL,
-      data: {
-        rating_business,
-        internet_status,
-        occupation_status,
-        comments,
-        report_support: 0,
-        business_id: parseInt(id),
-        user_id: cookies.get("id"),
-      },
-    })
-      .then(() => {
-        window.location.href = `/establishment/${id}`;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
 
   const [rating_business, setRating_business] = useState("");
   const [internet_status, setInternet_status] = useState("");
   const [occupation_status, setOccupation_status] = useState("");
   const [comments, setComments] = useState("");
+
+  const data = {
+    rating_business,
+    internet_status,
+    occupation_status,
+    comments,
+    report_support: 0,
+    business_id: parseInt(id),
+    user_id: cookies.get("id"),
+  };
+
+  const postReport = () => {
+    setReport({ data }).then((window.location.href = `/establishment/${id}`));
+  };
 
   function handleChange(name, value) {
     if (name === "rating_business") {

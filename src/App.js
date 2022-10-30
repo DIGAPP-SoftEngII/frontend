@@ -3,12 +3,12 @@ import Home from "./Pages/Home/Home";
 import NotFound from "./Pages/NotFound/NotFound";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./Pages/Login/Login";
-import "./App.css";
 import Register from "./Pages/Register/Register";
 import Establishments from "./Pages/Establishments/Establishments";
 import Establishment from "./Pages/Establishment/Establishment";
 import RegisterEst from "./Pages/RegisterEst/RegisterEst";
 import UserAdmin from "./Pages/UserAdmin/UserAdmin";
+import "./App.css";
 
 function App() {
   return (

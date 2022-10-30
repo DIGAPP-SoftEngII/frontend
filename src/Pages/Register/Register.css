@@ -1,8 +1,8 @@
 .register {
   position: relative;
-  height: 100%;
-  padding-top: 80px;
-  padding-bottom: 60px;
+  height: 100vh;
+  padding-top: 15vh;
+  padding-bottom: 5vh;
   background: rgb(255, 114, 97);
   background: linear-gradient(
     90deg,

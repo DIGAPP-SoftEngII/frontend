@@ -30,7 +30,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="navbar">
+    <div className="my_navbar">
       <nav className="navbar__container">
         <Link
           className="navbar__logo"
