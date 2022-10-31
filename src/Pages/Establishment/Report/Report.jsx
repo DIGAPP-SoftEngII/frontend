@@ -22,6 +22,7 @@ function Report() {
         if (rep.business_id === parseInt(id)) {
           reps.push(rep);
         }
+        return null;
       });
       setReports(reps);
     });
