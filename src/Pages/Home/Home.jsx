@@ -37,7 +37,7 @@ function Home() {
     <div className="my_home">
       <Hero className="hero__section" imgSrc={bg1} />
       {sections.map((sec) => (
-        <div className={`slider__section__${sec.color}`}>
+        <div key={sec.id} className={`slider__section__${sec.color}`}>
           <Slider
             imageSrc={sec.img}
             tittle={sec.tittle}
