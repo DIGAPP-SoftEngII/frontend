@@ -26,7 +26,7 @@ function Report() {
       });
       setReports(reps);
     });
-  }, []);
+  }, [id]);
 
   return (
     <div className="report">

@@ -38,7 +38,7 @@ function Establishment() {
         }
       });
     sesionValidation();
-  }, [{ id }]);
+  }, [id]);
 
   const sesionValidation = () => {
     if (!cookies.get("name")) {

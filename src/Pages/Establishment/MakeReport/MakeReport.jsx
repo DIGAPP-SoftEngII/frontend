@@ -11,7 +11,6 @@ const cookies = new Cookies();
 function MakeReport() {
   const { id } = useParams();
 
-  const [currentValue, setCurrentValue] = useState(0);
   const [rating_business, setRating_business] = useState(0);
   const [internet_status, setInternet_status] = useState(0);
   const [occupation_status, setOccupation_status] = useState("");
@@ -37,10 +36,6 @@ function MakeReport() {
 
   const postReport = () => {
     setReport({ data }).then((window.location.href = `/establishment/${id}`));
-  };
-
-  const handleClick = (value) => {
-    setCurrentValue(value);
   };
 
   /// Handle will be used to refactor code
