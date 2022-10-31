@@ -23,7 +23,8 @@ function Establisments() {
                 id={est.id}
                 name={est.name}
                 img={est.cover_picture}
-                desc={est.description}
+                qualy={est.rating}
+                address={est.address}
               />
             </div>
           ))

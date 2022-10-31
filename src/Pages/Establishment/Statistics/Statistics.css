@@ -1,4 +1,5 @@
 .statistics {
+  padding-top: 10px;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   margin-top: 20px;

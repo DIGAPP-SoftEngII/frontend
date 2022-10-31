@@ -1,6 +1,6 @@
 .my__card__container {
   width: 95%;
-  height: 400px;
+  height: 450px;
   margin: 10px;
   padding: 20px;
   display: flex;
@@ -21,7 +21,7 @@
 }
 
 .image__card {
-  padding: 3px;
+  padding: 2px;
 }
 
 .img__card {
@@ -29,14 +29,18 @@
   border-radius: 5px;
 }
 
+.card__tittle {
+  font-size: 2rem;
+  font-family: "Montez", cursive;
+}
+
 .card__desc {
-  overflow: hidden;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 .card__desc h3 {
-  margin-top: -1px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Montez", cursive;
 }
 
