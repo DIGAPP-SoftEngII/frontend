@@ -113,6 +113,7 @@ function MakeReport() {
           type="textarea"
           className="make__input make__text__area"
           name="comments"
+          placeholder="Dejanos tus comentarios"
           onChange={(e) => handleChange(e.target.value)}
         />
         <button
