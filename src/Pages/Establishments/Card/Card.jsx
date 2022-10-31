@@ -3,7 +3,7 @@ import Stars from "../../../components/Stars/Stars";
 import { Link } from "react-router-dom";
 import "./Card.css";
 
-function Card({ id, name, img, qualy, address }) {
+function Card({ id, name, img, qualy, internet, address }) {
   return (
     <Link className="my__card__container" to={`/establishment/${id}`}>
       <div className="image__card">
@@ -18,7 +18,7 @@ function Card({ id, name, img, qualy, address }) {
         <h3>Calificación</h3>
         <Stars state={qualy} />
         <h3>Interenet</h3>
-        <Stars state={qualy} />
+        <Stars state={internet} />
       </div>
     </Link>
   );

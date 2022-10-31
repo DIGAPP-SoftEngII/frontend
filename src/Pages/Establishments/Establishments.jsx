@@ -24,6 +24,7 @@ function Establisments() {
                 name={est.name}
                 img={est.cover_picture}
                 qualy={est.rating}
+                internet={est.internet_quality}
                 address={est.address}
               />
             </div>
