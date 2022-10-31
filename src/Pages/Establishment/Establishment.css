@@ -106,7 +106,8 @@
   border-radius: 5px;
 }
 
-.my__loading {
+.est__icon {
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 992px) {

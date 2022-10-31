@@ -6,6 +6,16 @@ import Report from "./Report/Report";
 import Cookies from "universal-cookie";
 import Loading from "../../components/Loading/Loading";
 import { getEstablishment } from "../../Services/Api";
+import { TbBrandAirtable } from "react-icons/tb";
+import {
+  MdPhone,
+  MdLocationOn,
+  MdOutlineMarkunreadMailbox,
+  MdMenuBook,
+  MdErrorOutline,
+  MdAccessTime,
+  MdAccessTimeFilled,
+} from "react-icons/md";
 import "./Establishment.css";
 
 const cookies = new Cookies();
@@ -43,11 +53,13 @@ function Establishment() {
       {est ? (
         <div className="est__container">
           <img src={est?.cover_picture} className="est__img" alt="cover-img" />
-          <h1 className="est__tittle"> {est?.name} </h1>
+          <h1 className="est__tittle"> {est.name} </h1>
           <div className="est__desc">
-            <h3 className="est__subtittle  cursive">Descripción</h3>
-            <p className="est__text"> {est?.description} </p>
-            <h3 className="est__subtittle cursive">Menú</h3>
+            <MdErrorOutline size={20} className="est__icon" />
+            <span className="est__subtittle  cursive">Descripción</span>
+            <p className="est__text"> {est.description} </p>
+            <MdMenuBook size={20} className="est__icon" />
+            <span className="est__subtittle cursive">Menú</span>
             <p className="est__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
               sit doloribus voluptatibus! Et eius, officiis, in earum at optio
@@ -60,37 +72,42 @@ function Establishment() {
           <div className="est__information">
             <h3 className="est__subtittle  cursive">Información</h3>
             <p className="est__text">
-              <span className="est__text__negrita">Ciudad:</span> {est?.city}
+              <MdLocationOn size={20} className="est__icon" />
+              <span className="est__text__negrita">Ciudad:</span> {est.city}
             </p>
             <p className="est__text">
+              <MdOutlineMarkunreadMailbox size={20} className="est__icon" />
               <span className="est__text__negrita">Dirección:</span>{" "}
-              {est?.address}
+              {est.address}
             </p>
             <p className="est__text">
+              <TbBrandAirtable size={20} className="est__icon" />
               <span className="est__text__negrita">
                 Tipo de Establecimiento:
               </span>{" "}
-              {est?.type}
+              {est.type}
             </p>
             <p className="est__text">
+              <MdAccessTime size={20} className="est__icon" />
               <span className="est__text__negrita">Hora Apertura:</span>{" "}
-              {est?.Opening}
+              {est.Opening}
             </p>
             <p className="est__text">
+              <MdAccessTimeFilled size={20} className="est__icon" />
               <span className="est__text__negrita">Hora de Cierre:</span>{" "}
-              {est?.Closing}
+              {est.Closing}
             </p>
             <p className="est__text">
-              <span className="est__text__negrita">Numero Telefónico:</span>{" "}
-              {est?.telephone_number}
+              <MdPhone size={20} className="est__icon" />
+              <span className="est__text__negrita \t">Telefono:</span>{" "}
+              {est.telephone_number}
             </p>
           </div>
           <div className="est__est">
-            <h3 className="est_subtittle cursive"> Estadisticas</h3>
             <Statistics est={est} />
           </div>
           <div className="est__rep">
-            <h3 className="est_subtittle cursive">Reportes</h3>
+            <h3 className="est_subtittle cursive">Comentarios</h3>
             {outVisible ? (
               <Report />
             ) : (

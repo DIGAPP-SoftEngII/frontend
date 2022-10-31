@@ -17,7 +17,7 @@ function Card({ id, name, img, qualy, address }) {
         <span>{address}</span>
         <h3>Calificación</h3>
         <Stars state={qualy} />
-        <h3>Calificación</h3>
+        <h3>Interenet</h3>
         <Stars state={qualy} />
       </div>
     </Link>

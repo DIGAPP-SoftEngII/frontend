@@ -4,16 +4,9 @@ import Slider from "./Slider/Slider";
 import bg1 from "../../assets/images/image5.jpg";
 import img1 from "../../assets/images/bg-landing.jpg";
 import img2 from "../../assets/images/image9.jpg";
-import Loading from "../../components/Loading/Loading";
-import { useEffect } from "react";
 import "./Home.css";
 
 function Home() {
-  useEffect(() => {
-    <Loading />;
-  }, []);
-
-  /// Set of sections on the HomePage
   const sections = [
     {
       id: 1,
