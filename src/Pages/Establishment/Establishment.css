@@ -98,6 +98,7 @@
 }
 
 .est__ses:hover {
+  text-decoration: none;
   color: #ff7261;
   transition: 250ms;
   cursor: pointer;

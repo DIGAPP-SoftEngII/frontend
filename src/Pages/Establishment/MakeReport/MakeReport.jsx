@@ -1,7 +1,8 @@
-import React from "react";
+import React, { startTransition } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { setReport } from "../../../Services/Api";
+import { FaStar } from "react-icons/fa";
 import Cookies from "universal-cookie";
 import "./MakeReport.css";
 
@@ -10,10 +11,19 @@ const cookies = new Cookies();
 function MakeReport() {
   const { id } = useParams();
 
-  const [rating_business, setRating_business] = useState("");
-  const [internet_status, setInternet_status] = useState("");
+  const [currentValue, setCurrentValue] = useState(0);
+  const [rating_business, setRating_business] = useState(0);
+  const [internet_status, setInternet_status] = useState(0);
   const [occupation_status, setOccupation_status] = useState("");
   const [comments, setComments] = useState("");
+
+  const colors = {
+    orange: "#FFBA5A",
+    grey: "#a9a9a9",
+  };
+
+  const stars = Array(5).fill(0);
+  const stars2 = Array(3).fill(0);
 
   const data = {
     rating_business,
@@ -29,23 +39,92 @@ function MakeReport() {
     setReport({ data }).then((window.location.href = `/establishment/${id}`));
   };
 
-  function handleChange(name, value) {
+  const handleClick = (value) => {
+    setCurrentValue(value);
+  };
+
+  /// Handle will be used to refactor code
+  /*   const handleChange = (name, value) => {
     if (name === "rating_business") {
+      console.log(name, rating_business);
       setRating_business(value);
     } else if (name === "internet_status") {
+      console.log(name, internet_status);
       setInternet_status(value);
     } else if (name === "occupation_status") {
-      console.log(name, value);
+      console.log(name, occupation_status);
       setOccupation_status(value);
     } else if (name === "comments") {
+      console.log(name, comments);
       setComments(value);
     }
-  }
+  }; */
+
+  const handleChange = (value) => {
+    setComments(value);
+  };
 
   return (
     <div className="makeReport">
       <h3 className="make__tittle">Reporta</h3>
-      <div className="make__form__container">
+      <div className="starSecction">
+        {stars.map((_, index) => {
+          return (
+            <FaStar
+              key={index}
+              size={20}
+              color={rating_business > index ? colors.orange : colors.grey}
+              onClick={() => {
+                setRating_business(index + 1);
+              }}
+            />
+          );
+        })}
+        <p className="maketext"> Califica nuestro establecimiento</p>
+
+        {stars.map((_, index) => {
+          return (
+            <FaStar
+              key={index}
+              size={20}
+              color={internet_status > index ? colors.orange : colors.grey}
+              onClick={() => {
+                setInternet_status(index + 1);
+              }}
+            />
+          );
+        })}
+        <p className="maketext"> Califica Nuestro internet</p>
+
+        {stars2.map((_, index) => {
+          return (
+            <FaStar
+              key={index}
+              size={20}
+              color={occupation_status > index ? colors.orange : colors.grey}
+              onClick={() => {
+                setOccupation_status(index + 1);
+              }}
+            />
+          );
+        })}
+        <p className="maketext"> Ocupacion</p>
+        <input
+          type="textarea"
+          className="make__input make__text__area"
+          name="comments"
+          onChange={(e) => handleChange(e.target.value)}
+        />
+        <button
+          className="make__btn"
+          onClick={() => {
+            postReport();
+          }}
+        >
+          Reportar
+        </button>
+      </div>
+      {/* <div className="make__form__container">
         <form className="make__form">
           <span className="make__text">Calificación del lugar</span>
           <select
@@ -99,7 +178,7 @@ function MakeReport() {
         }}
       >
         Reportar
-      </button>
+      </button> */}
     </div>
   );
 }

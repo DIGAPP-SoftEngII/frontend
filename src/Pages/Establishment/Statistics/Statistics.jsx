@@ -1,5 +1,6 @@
 import React from "react";
 import Stars from "../../../components/Stars/Stars";
+import { SiSpeedtest } from "react-icons/si";
 import "./Statistics.css";
 
 function Statistics({ est }) {
@@ -12,7 +13,10 @@ function Statistics({ est }) {
             <Stars state={est.rating} />
           </div>
           <div className="stat__item">
-            <h3>Internet</h3>
+            <h3>
+              <SiSpeedtest size={20} className="stat__icon" />
+              Internet
+            </h3>
             <Stars state={est.internet_quality} />
           </div>
           <div className="stat__item">

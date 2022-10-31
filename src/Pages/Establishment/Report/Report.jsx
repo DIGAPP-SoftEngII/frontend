@@ -29,6 +29,19 @@ function Report() {
 
   return (
     <div className="report">
+      {makeRep ? (
+        <MakeReport />
+      ) : (
+        <button
+          className="rep__button"
+          onClick={() => {
+            makeReport();
+          }}
+        >
+          ¡ Realizar un Reporte !
+        </button>
+      )}
+
       {reports ? (
         reports.map((rep) => (
           <div key={rep.id} className="report__container">
@@ -62,18 +75,6 @@ function Report() {
         ))
       ) : (
         <Loading />
-      )}
-      {makeRep ? (
-        <MakeReport />
-      ) : (
-        <button
-          className="rep__button"
-          onClick={() => {
-            makeReport();
-          }}
-        >
-          ¡ Realizar un Reporte !
-        </button>
       )}
     </div>
   );
