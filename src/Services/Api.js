@@ -14,12 +14,12 @@ export const getEstablishment = ({ id }) => {
 
 export const getReports = () => {
   return axios
-    .get("https://backenddig.herokuapp.com/api/reports/")
+    .get("https://backenddig.herokuapp.com/api/reports")
     .then((res) => res.data);
 };
 
 export const setReport = ({ data }) => {
   return axios
-    .post("https://backenddig.herokuapp.com/api/reports/", data)
+    .post("https://backenddig.herokuapp.com/api/reports", data)
     .then((res) => console.log(res));
 };
