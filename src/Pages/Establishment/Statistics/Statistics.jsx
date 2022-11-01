@@ -10,6 +10,7 @@ function Statistics({ est }) {
         <>
           <div className="stat__item">
             <h3>Calificación</h3>
+            {console.log(est.rating)}
             <Stars state={est.rating} />
           </div>
           <div className="stat__item">
